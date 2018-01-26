@@ -89,13 +89,15 @@ The build works and we're up.
 open -a Safari https://app-te1.herokuapp.com/
 ```
 
-I had an issue at first with the app failing to bind to ``$PORT``.  
+We don't need a picture.
+
+I had an issue at first with the app failing to bind to ``$PORT`` (and not understanding what that means):  
 
 ```
 Web process failed to bind to $PORT within 60 seconds of launch
 ```
 
-I fixed it with this in ``app.py`` [stackoverflow](https://stackoverflow.com/questions/17260338/deploying-flask-with-heroku):
+I fixed it like this in ``app.py`` [from stackoverflow](https://stackoverflow.com/questions/17260338/deploying-flask-with-heroku):
 
 ```
 if 'PORT' in os.environ:
@@ -110,10 +112,16 @@ else:
 app.run(host=host, port=port)
 ```
 
-Heroku sets the environment variable.  If it's not set (local) then we run on ``5000`` as usual.  The ``0.0.0.0`` means listen for local machines as well as on ``localhost``.
+Heroku sets the ``PORT`` environment variable.  If it's not set (we're running locally) then we set the port to ``5000`` as usual.  
 
-push to my repo on Github.
+The ``0.0.0.0`` means listen for network machines.  ``python app.py`` works fine with ``0.0.0.0``.  I did it this way because ``heroku local`` fails otherwise.
+
+Push to my repo on Github.
 
 ```
 commit dbaa5bd6b877519eee1797513105eba9c9e1873c
 ```
+
+A few edits to the README later, I have:
+
+
