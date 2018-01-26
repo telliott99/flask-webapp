@@ -1,5 +1,10 @@
-This project is my introduction to Flask.  I'm going to build a basic app based on scripter and then get it to work on Heroku.
+This project is my introduction to [Flask](http://flask.pocoo.org).  I'm going to build a basic app based on scripter and then get it to work in the cloud on Heroku.
 
-It'll go in stages, with a single repo and we'll keep track of the commits at each step.  The SHA-256 digest of the corresponding commit is shown for each step.
+We go in stages, with a single repo and keeping track of the commits at each step.  The SHA-256 digest of the commit is shown for each step.
 
-- Step 1:  [README.md](README1.md)
+- 1  [README.md](md/README1.md) ``c817``
+Python 2.7
+
+- 2 [README.md](md/README2.md) ``dbaa`` 
+Heroku, pipenv
+

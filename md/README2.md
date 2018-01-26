@@ -98,8 +98,22 @@ Web process failed to bind to $PORT within 60 seconds of launch
 I fixed it with this in ``app.py`` [stackoverflow](https://stackoverflow.com/questions/17260338/deploying-flask-with-heroku):
 
 ```
-port = int(os.environ.get('PORT', 5000))
-app.run(host='0.0.0.0', port=port)
+if 'PORT' in os.environ:
+    # we're on Heroku
+    host = "0.0.0.0"
+    port = int(os.environ['PORT'])
+else:
+    host = "localhost"
+    port = 5000
+
+#port = int(os.environ.get('PORT', 5000))
+app.run(host=host, port=port)
 ```
 
 Heroku sets the environment variable.  If it's not set (local) then we run on ``5000`` as usual.  The ``0.0.0.0`` means listen for local machines as well as on ``localhost``.
+
+push to my repo on Github.
+
+```
+commit dbaa5bd6b877519eee1797513105eba9c9e1873c
+```

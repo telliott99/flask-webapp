@@ -58,11 +58,13 @@ base.txt	index.html
 
 From the bottom up, we have a nice picture
 
-<img src="app/static/working_dog.png" style="width: 400px;" />
+<img src="../app/static/working_dog.png" style="width: 400px;" />
 
-I am not sure any more where I got this, and Google image search isn't helping.  This is a working dog, though.  I've used it as an avatar on occasion.
+I am not sure any more where I got this, and Google image search isn't helping.  This is a working dog, though.  
 
-There are also a couple of templates.  Here is a text version of [base](app/templates/base.txt).html.  
+I've used it as an avatar on occasion.
+
+There are also a couple of templates.  Here is a text version of [base](../app/templates/base.txt).html.  
 
 Moving up one level, in the ``app`` folder, we have 
 
@@ -99,7 +101,7 @@ from app import app
 app.run(debug = True)
 ```
 
-Most of the (very stripped-down) application logic is in [views.py](app/views.py) in the ``app`` directory.
+Most of the (very stripped-down) application logic is in [views.py](../app/views.py) in the ``app`` directory.
 
 **views.py**
 
@@ -141,6 +143,8 @@ Just ``cd`` into the project directory and do
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 181-062-869
+
+ 
 ```
 
 Then, you can use ``curl`` or you can open Safari and go to
@@ -148,10 +152,10 @@ Then, you can use ``curl`` or you can open Safari and go to
 ```
 http://localhost:5000
 ``` 
-
+ 
 and get
 
-<img src="figs/flask_screenshot.png" style="width: 400px;" />
+<img src="../figs/flask_screenshot.png" style="width: 400px;" />
 
 Terminal logs the activity
 
@@ -218,8 +222,7 @@ and add the ``error.html`` template.
 {% endblock %}
 ```
 
-<img src="figs/flask_screenshot2.png" style="width: 400px;" />
-
+<img src="../figs/flask_screenshot2.png" style="width: 400px;" />
 
 #### Note
 
