@@ -124,4 +124,9 @@ commit dbaa5bd6b877519eee1797513105eba9c9e1873c
 
 A few edits to the README later, I have:
 
-
+```
+git log
+..
+commit 233d5121bb585547dd34da2f7a1c0cdaddeea5d9 (HEAD -> master
+..
+```
