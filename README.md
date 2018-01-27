@@ -12,7 +12,19 @@ Heroku, pipenv
 
 - 4 Get the bioinformtics scripts to work.
 
-That is the current version of the project.
+This is the current version of the project.
+
+#### pipenv
+
+Although some things work without it, it's best to make a virutal environment.
+
+```
+pipenv install --three
+pipenv install flask gunicorn
+```
+
+#### Changes
+
 
 I grafted all my sequence scripts into the app.  This was tedious, but not difficult.
 
@@ -20,7 +32,7 @@ I'm not too swift at debugging.  I found it most helpful to run ``python3 app.py
 
 The only Python 3 issue was in ``parser.py``.  
 
-First, you must do 
+First, you must now do 
 
 ```
 from urllib.parse import unquote_plus
@@ -36,7 +48,7 @@ data = request.get_data()
     data = str(data, encoding='utf8')
 ```
 
-Without this, I get ``a byte-like object is required``.
+Without the last line, I get ``a byte-like object is required``.
 
 On the other hand
 
@@ -58,7 +70,7 @@ And it's fine.
 
 I did have a ``heroku local`` issue that was fixed by re-booting my machine.
 
-Not sure what happened but the ``heroku`` remote is gone.
+Not sure what happened but the ``heroku`` remote is gone in this version of the project.
 
 ```
 > git remote add heroku https://git.heroku.com/app-te1.git
@@ -66,5 +78,20 @@ Not sure what happened but the ``heroku`` remote is gone.
 > open -a Safari https://app-te1.herokuapp.com/
 ```
 
-The app comes up but then there is an error.
+The app comes up but then there is an error.  It was that ``parser`` issue:  I still had
+
+```
+    for t in data.split('&'):
+```
+
+Is it possible I'm sometimes using Python 2 when I think it's 3?  It should not have worked before, with this code.
+
+In any case, it now works on Heroku.  Check again locally.
+
+As far as I can tell, everything works.
+
+Commit.
+
+```
+```
 
