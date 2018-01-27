@@ -1,4 +1,6 @@
-This project is my introduction to [Flask](http://flask.pocoo.org).  I'm going to build a basic app based on scripter and then get it to work in the cloud on Heroku.
+This project is my introduction to [Flask](http://flask.pocoo.org).  
+
+This is a rewrite of my basic app called scripter, which I then got to work in the cloud on Heroku.  
 
 We go in stages, with a single repo and keeping track of the commits at each step.  The SHA-256 digest of the commit is shown for each step.
 
