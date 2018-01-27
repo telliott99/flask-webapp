@@ -7,7 +7,7 @@ def parse_request_data(request):
         return D
         
     s = data.decode('utf8')
-    for t in data.split('&'):
+    for t in s.split('&'):
         k,v = t.strip().split('=')
         v = unquote_plus(v)
         D[k] = v

@@ -58,5 +58,13 @@ And it's fine.
 
 I did have a ``heroku local`` issue that was fixed by re-booting my machine.
 
+Not sure what happened but the ``heroku`` remote is gone.
 
+```
+> git remote add heroku https://git.heroku.com/app-te1.git
+> git push heroku master
+> open -a Safari https://app-te1.herokuapp.com/
+```
+
+The app comes up but then there is an error.
 
