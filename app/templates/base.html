@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <title>Scripter</title>
     <link rel="stylesheet" type="text/css" 
-    href={{ url_for("static", filename="style.css") }}
+    href={{ url_for("static",
+            filename="style.css") }}
   </head>
   <body>
     <h1>
       <img 
-        src="{{ url_for("static", filename='working_dog.png') }}",   
+        src="{{ url_for("static", 
+        filename='working_dog.png') }}",   
         height= "106", width="160", 
         alt="{{"working_dog"}}"
     </h1>
@@ -17,7 +19,16 @@
         <a href="{{ url_for('index') }}">Home</a>
     </h2>
     <hr>
-  
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <span style="color: red;">{{message}}</span></br>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    
     {% block content %}
     {% endblock %}
   </body>

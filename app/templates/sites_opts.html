@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{name}}</h1>
+<form method="post" action="/dispatch">
+  
+<h3>Paste your sequence here:</h3>
+<textarea name="seq" rows="10" cols="60" style="resize: none;" data-role="none"></textarea>
+<hr>
+  
+<p><input type="submit" value="Submit form"></p>
+
+<input type="hidden" value="extra_sites" name="prog" />
+<input type="hidden" value="seq_entry" name="form" />
+
+</form>
+{% endblock %}
