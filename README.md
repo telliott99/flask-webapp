@@ -8,9 +8,9 @@ Python 2.7
 - 2 [README.md](md/README2.md) ``233d`` 
 Heroku, pipenv
 
-- 3 [README.md](md/README3.md) ``xxxx`` Python 3, gunicorn
+- 3 [README.md](md/README3.md) ``ace1`` Python 3, gunicorn
 
-- 4 Get the bioinformtics scripts to work.
+- 4 Get the bioinformtics scripts to work.  ``c50f``
 
 This is the current version of the project.
 
@@ -93,5 +93,6 @@ As far as I can tell, everything works.
 Commit.
 
 ```
+commit c50f2ef0c086dfdab070af293a5e83c00598deb9
 ```
 
